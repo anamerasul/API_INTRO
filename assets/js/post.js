@@ -42,3 +42,21 @@ function AddPost(){
 
 }
 AddPost();
+function AddPost2(){
+        fetch('https://jsonplaceholder.typicode.com/post2s',{
+                method: 'POST',
+                body: JSON.stringify({
+                  title: 'fo2o',
+                  body: 'bar',
+                  userId: 1,
+        }),
+        headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              }
+})
+
+.then((res)=>res.json())
+.then((json) => console.log(json))
+
+}
+AddPost2();
